@@ -1,37 +1,250 @@
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+/* Apply box-sizing and default font styles globally */
+* {
+    box-sizing: border-box;
+    /* Includes padding and border in the element's total width and height */
+    font-family: "Roboto", sans-serif;
+    /* Sets the font to Roboto or a generic sans-serif font */
+    font-weight: 100;
+    /* Sets the font weight to 100 (light) */
+    font-style: normal;
+    /* Ensures text is in normal style */
 }
 
-a {
-    font-size: 36px;
-
+/* Basic styling for the body */
+body {
+    margin: 0;
+    /* Removes default margin */
+    color: #f1f1f1;
+    /* Sets text color to a light gray for readability */
 }
 
-header {
-    background-color: azure;
-}
-.dtfont{
-    font-size: 30px;
-    color: rgb(0, 183, 255);
-}
-input, textarea {
-    padding: 10px;
-    font-size: 1em;
-  
-    border-radius: 4px;
-    margin-bottom: 20px;
+/* Styling for the background video */
+#myVideo {
+    position: fixed;
+    /* Keeps the video fixed in place */
+    top: 0;
+    /* Positions the video at the top */
+    left: 0;
+    /* Positions the video at the left */
     width: 100%;
+    /* Stretches the video to cover the full width */
+    height: 100%;
+    /* Stretches the video to cover the full height */
+    object-fit: cover;
+    /* Ensures the video covers the viewport without distortion */
+    z-index: -1;
+    /* Places the video behind all other content */
+    transition: filter 0.1s ease;
+    /* Smooth transition for filter changes (brightness) */
 }
-label {
-    margin: 10px 0 5px;
-    font-size: 1.2em;
+
+/* Styling for the header */
+header {
+    position: sticky;
+    /* Keeps the header fixed at the top of the viewport */
+    top: 0;
+    /* Positions the header at the top */
+    left: 0;
+    /* Positions the header at the left */
+    width: 100%;
+    /* Stretches the header to the full width */
+    z-index: 2;
+    /* Ensures the header is above the video */
+    padding: 4px 0;
+    /* Adds vertical padding inside the header */
 }
-h1{
-    color: blue;
+
+/* Styling for the navigation bar */
+nav {
+    font-size: 20px;
+    /* Sets font size for navigation items */
+    margin: 0 20px;
+    /* Adds horizontal margin to the nav container */
+    display: flex;
+    /* Uses flexbox layout */
+    justify-content: space-between;
+    /* Distributes space between and around nav items */
+    background-color: #7eccdc76;
+    /* Sets a semi-transparent background color */
+    transition: background-color cubic-bezier(1, 0, 0, 1) ease;
+    /* Smooth transition for background color */
 }
-h2{
-    color: blueviolet;
+
+/* Styling for the logo container in the navbar */
+.logo {
+    display: flex;
+    /* Uses flexbox layout for the logo */
+    align-items: center;
+    /* Vertically centers items */
+    padding: 4px 0;
+    /* Adds vertical padding inside the logo container */
+    justify-content: left;
+    /* Aligns items to the left */
+}
+
+/* Styling for the navigation list */
+nav ul {
+    list-style: none;
+    /* Removes default list styling */
+    margin: 0;
+    /* Removes default margin */
+    padding: 0;
+    /* Removes default padding */
+    display: flex;
+    /* Uses flexbox layout */
+    align-items: center;
+    /* Vertically centers items */
+    justify-content: right;
+    /* Aligns items to the right */
+    padding: 4px 0;
+    /* Adds vertical padding inside the list */
+}
+
+/* Styling for individual navigation list items */
+nav ul li {
+    margin: 0 15px;
+    /* Adds horizontal margin to each list item */
+}
+
+/* Styling for navigation links */
+nav ul li a {
+    text-decoration: none;
+    /* Removes underline from links */
+    color: #f1f1f1;
+    /* Sets link color to a light gray */
+    text-shadow: 2px 2px #000000;
+    /* Adds a subtle shadow to the text for better readability */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #ddd;
+    /* Changes link color on hover */
+}
+
+/* Styling for the main content area */
+main {
+    position: relative;
+    /* Allows content to appear above the video */
+    z-index: 1;
+    /* Ensures main content is above the video */
+    padding-top: 60px;
+    /* Adds top padding to account for header height */
+}
+
+/* Styling for the footer */
+footer {
+    position: relative;
+    /* Allows footer to appear above the video */
+    z-index: 1;
+    /* Ensures footer is above the video */
+}
+
+/* Styling for the first block section */
+.firtBLock {
+    display: flex;
+    /* Uses flexbox layout */
+    justify-content: center;
+    /* Centers content horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    height: 100%;
+    /* Sets height to 100% of its container */
+    width: 100%;
+    /* Sets width to 100% of its container */
+    padding: 0 41px;
+    /* Adds horizontal padding */
+}
+
+/* Styling for images in the first block section */
+.firtBLock img {
+    max-width: 100%;
+    /* Ensures image scales with its container */
+    height: 20%;
+    /* Sets a fixed height for the image */
+    padding-left: 5%;
+    /* Adds left padding to the image */
+}
+
+/* Styling for headings in the first block section */
+.firtBLock h1 {
+    text-align: center;
+    /* Centers the text */
+    font-weight: 1000;
+    /* Sets font weight to 1000 (bold) */
+    color: #E39197;
+    /* Sets text color to a pink shade */
+    text-shadow: 4px 4px #4A6C95;
+    /* Adds a shadow to the text for better visibility */
+}
+
+/* Styling for paragraphs in the first block section */
+.firtBLock p {
+    font-size: 20px;
+    /* Sets font size for paragraphs */
+    text-align: center;
+    /* Centers the text */
+}
+
+/* Styling for the second block section */
+.secondBlock {
+    display: flex;
+    /* Uses flexbox layout */
+    margin: 30px 20px;
+    /* Adds margin around the container */
+    align-items: center;
+    /* Vertically centers items */
+    justify-content: space-evenly;
+    /* Distributes space evenly between items */
+}
+
+/* Styling for definition terms in the second block section */
+.secondBlock dt {
+    font-size: 28px;
+    /* Sets font size for definition terms */
+    color: #556F7B;
+    /* Sets text color to a blue-gray shade */
+    text-shadow: 1px 1px #000000;
+    /* Adds a subtle shadow to the text */
+}
+
+/* Styling for paragraphs in the second block section */
+.secondBlock p {
+    font-size: 20px;
+    /* Sets font size for paragraphs */
+    text-align: center;
+    /* Centers the text */
+}
+
+/* Styling for images in the second block section */
+.secondBlock img {
+    transition: filter 0.3s ease;
+    /* Smooth transition for filter changes (grayscale) */
+    filter: grayscale(100%);
+    /* Makes the image black and white */
+    max-width: 40%;
+    /* Ensures image scales with its container */
+    height: 20%;
+    /* Sets a fixed height for the image */
+    padding-left: 5%;
+    /* Adds left padding to the image */
+    border-radius: 4px;
+    /* Rounds the corners of the image */
+}
+
+/* Hover effect for images in the second block section */
+.secondBlock img:hover {
+    filter: grayscale(0%);
+    /* Restores the image color on hover */
+}
+
+.thirdBlock {
+    display: flex;
+    /* Uses flexbox layout */
+    margin: 30px 20px;
+    /* Adds margin around the container */
+    align-items: center;
+    /* Vertically centers items */
+    justify-content: space-evenly;
+    /* Distributes space evenly between items */
 }
